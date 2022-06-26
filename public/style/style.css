@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #dfbb9d;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  color: #af6426;
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: flutuar 1s forwards;
+}
+
+@keyframes flutuar {
+  from {
+    transform: translatey(-10rem);
+  }
+
+  to {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
+
+.containerForm {
+  width: 40%;
+  height: 80vh;
+  text-align: center;
+  margin: 1rem auto;
+  background-color: #f7e2d6;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  opacity: 0;
+  animation: entrada 1s forwards ease-out;
+}
+
+@keyframes entrada {
+  from {
+    transform: translate(-20rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.boxInputs {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 1rem auto;
+}
+
+.boxInputs input {
+  height: 1.8rem;
+  border-radius: 0.65rem;
+  border: none;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  margin: 0.5rem 0;
+  padding-left: 0.9rem;
+  font-size: 1rem;
+}
+
+.boxInputs input:focus-visible {
+  transform: scale(1.1);
+  outline: none;
+}
+.btnEntrar {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.btnEntrar button {
+  background-color: #a084cf;
+  border: none;
+  padding: 0.5rem;
+  width: 100%;
+  color: rgb(3, 3, 43);
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 0.7rem;
+}
+.btnEntrar button:hover {
+  background-color: #9dd6df;
+}
+
+.icones {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.icones h4 {
+  font-size: 1.5rem;
+}
+.icones a i {
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  transition: 0.5s;
+}
+.icones i:hover {
+  color: #1ab6ce;
+  transform: scale(1.2);
+}
+
+.newCount {
+  width: 90%;
+  margin: 0.5rem auto;
+}
+
+.newCount p{
+  font-size: 1.3rem;
+}
+
+.newCount a {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .containerForm {
+    width: 80%;
+  }
+
+  .boxInputs {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 505px){
+
+  .newCount p{
+    font-size: 1.1rem;
+    color: blue;
+  }
+  
+  .newCount a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    
+  }
+
+
+  
+}
+
+@media screen and (max-width: 425px) {
+  .containerForm {
+    width: 90%;
+  }
+
+  .boxInputs {
+    width: 90%;
+  }
+
+  .icones h4 {
+    font-size: 1.3rem;
+  }
+
+  .newCount p{
+    font-size: 1.1rem;
+    color: red;
+  }
+  
+  .newCount a {
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+}
